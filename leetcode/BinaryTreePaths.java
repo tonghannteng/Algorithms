@@ -9,6 +9,7 @@
  * TreeNode(int x) { val = x; }
  * }
  */
+
 class BinaryTreePaths {
 
     List<String> result = new ArrayList<>();
