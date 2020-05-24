@@ -7,8 +7,8 @@ class MergeSortedArray {
         for (i in 0 until m) {
             priorityQueue.offer(nums1[i])
         }
-        for (i in 0 until n) {
-            priorityQueue.offer(nums2[i])
+        for (n in nums2) {
+            priorityQueue.offer(n)
         }
         var i = 0
         while (!priorityQueue.isEmpty()) {
