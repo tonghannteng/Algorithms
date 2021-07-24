@@ -1,16 +1,23 @@
 //  1544. Make The String Great
 
 class MakeStringGreat {
+
     public String makeGood(String s) {
-        StringBuilder sb = new StringBuilder();
-        char[] characters = s.toCharArray();
-        for (char c : characters) {
-            if (sb.length() > 0 && Math.abs(c - sb.charAt(sb.length() - 1)) == 'a' - 'A') {
-                sb.deleteCharAt(sb.length() - 1);
+        if (s.length() == 0) return "";
+        Stack<Character> stack = new Stack<>();
+        stack.push(s.charAt(0));
+        for (int i = 1; i < s.length(); i++) {
+            char current = s.charAt(i);
+            if (!stack.isEmpty() && Math.abs(stack.peek() - current) == 32) {
+                stack.pop();
             } else {
-                sb.append(c);
+                stack.push(current);
             }
         }
-        return sb.toString();
+        StringBuilder result = new StringBuilder();
+        while (!stack.isEmpty()) {
+            result.append(stack.pop());
+        }
+        return result.reverse().toString();
     }
 }
