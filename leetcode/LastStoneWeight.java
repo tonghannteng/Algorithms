@@ -12,9 +12,7 @@ class LastStoneWeight {
         while (queue.size() > 1) {
             int p1 = queue.remove();
             int p2 = queue.remove();
-            if (p1 != p2) {
-                queue.add(Math.abs(p1 - p2));
-            }
+            if (p1 != p2) queue.add(Math.abs(p1 - p2));
         }
         return queue.isEmpty() ? 0 : queue.peek();
     }
