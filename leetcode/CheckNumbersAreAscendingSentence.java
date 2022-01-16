@@ -1,7 +1,7 @@
 //  2042. Check if Numbers Are Ascending in a Sentence
 
 class CheckNumbersAreAscendingSentence {
-    
+
     public boolean areNumbersAscending(String s) {
         String[] arr = s.split(" ");
         int min = Integer.MIN_VALUE;
