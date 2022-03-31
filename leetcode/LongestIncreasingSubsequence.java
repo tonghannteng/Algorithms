@@ -1,7 +1,7 @@
 //  300. Longest Increasing Subsequence
 
 class LongestIncreasingSubsequence {
-    
+
     public int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
         Arrays.fill(dp, 1);
